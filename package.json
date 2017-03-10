@@ -1,0 +1,22 @@
+{
+  "name": "soundboxing-hacking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "osu-parser": "^0.3.3",
+    "prompt": "^1.0.0",
+    "protocol-buffers": "^3.2.1",
+    "q": "^1.4.1",
+    "request": "^2.79.0",
+    "unzip": "^0.1.11",
+    "uuid": "^3.0.1",
+    "ytdl-core": "^0.10.0"
+  }
+}

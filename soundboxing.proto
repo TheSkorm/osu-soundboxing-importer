@@ -1,0 +1,68 @@
+package soundboxing;
+
+message Performance {
+        optional float Seconds = 1;
+        optional string YoutubeId = 2;
+        optional string SongName = 3;
+        optional float SongLength = 4;
+        optional string SongChannel = 5;
+        optional string SongThumbnail = 6;
+        optional int32 SongThumbnailWidth = 7;
+        optional int32 SongThumbnailHeight = 8;
+        optional bytes Legacy = 9;
+        repeated Punch punches = 10;
+        repeated Frame frames = 11;
+}
+
+message Punches {
+        repeated Punch punch = 1;
+}
+
+message Punch {
+        required string punch_id = 1;
+        required string performance_id = 2;
+        required double timestamp = 3;
+        required float x = 4;
+        required float y = 5;
+        required float z = 6;
+        required float v_x = 7;
+        required float v_y = 8;
+        required float v_z = 9;
+        optional bool Triggered = 10;
+        optional bool is_left = 11;
+}
+
+message Frame {
+        optional float Timestamp = 1;
+        optional float UserPosX = 2;
+        optional float UserPosY = 3;
+        optional float UserPosZ = 4;
+        optional float UserRotX = 5;
+        optional float UserRotY = 6;
+        optional float UserRotZ = 7;
+        optional float HeadPosX = 8;
+        optional float HeadPosY = 9;
+        optional float HeadPosZ = 10;
+        optional float HeadRotX = 11;
+        optional float HeadRotY = 12;
+        optional float HeadRotZ = 13;
+        optional float LeftHandPosX = 14;
+        optional float LeftHandPosY = 15;
+        optional float LeftHandPosZ = 16;
+        optional float LeftHandRotX = 17;
+        optional float LeftHandRotY = 18;
+        optional float LeftHandRotZ = 19;
+        optional float RightHandPosX = 20;
+        optional float RightHandPosY = 21;
+        optional float RightHandPosZ = 22;
+        optional float RightHandRotX = 23;
+        optional float RightHandRotY = 24;
+        optional float RightHandRotZ = 25;
+        optional float EyePosX = 26;
+        optional float EyePosY = 27;
+        optional float EyePosZ = 28;
+        optional float EyeRotX = 29;
+        optional float EyeRotY = 30;
+        optional float EyeRotZ = 31;
+        repeated float AudioSamples = 32;
+}
